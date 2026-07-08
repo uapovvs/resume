@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Мое Портфолио | Full-stack Developer",
-  description: "Личный сайт и резюме. Создаю современные веб-приложения.",
+  title: "Саид Уапов | UI/UX & Full-stack",
+  description: "Дизайнер, Motion-художник и Full-stack разработчик. Создаю сайты, 3D и motion-графику.",
+  openGraph: {
+    title: "Саид Уапов | Портфолио",
+    description: "Создаю продукты, которые выглядят как искусство и работают как часы.",
+    url: "https://resume-peach-nine-69.vercel.app/",
+    siteName: "Portfolio",
+    locale: "ru_RU",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
