@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular_0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium_0.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Semibold_0.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold_0.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Extrabold_0.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black_0.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --font-sans: "Gilroy", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-fwd: marquee-fwd var(--duration, 25s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--duration, 25s) linear infinite;
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+}
+
+:root {
+  /* Dark mode as default */
+  --background: #000000;
+  --foreground: #f5f5f7;
+  --primary: #8b5cf6; /* Violet */
+  --primary-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --radius: 1rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Gilroy", sans-serif !important;
+  overflow-x: hidden;
+}
+
+* {
+  border-color: var(--border);
+  font-family: "Gilroy", sans-serif !important;
+}
